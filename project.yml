@@ -1,0 +1,38 @@
+name: Scratch
+options:
+  deploymentTarget:
+    macOS: "13.0"
+  createIntermediateGroups: true
+
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    DEVELOPMENT_TEAM: 74S429U9E6
+
+targets:
+  Scratch:
+    type: application
+    platform: macOS
+    deploymentTarget: "13.0"
+    sources:
+      - Sources
+      - path: Scratch_Icon.icon
+        type: folder.iconcomposer.icon
+    info:
+      path: Sources/Info.plist
+      properties:
+        CFBundleDisplayName: Scratch
+        CFBundleName: Scratch
+        LSMinimumSystemVersion: "13.0"
+        NSHighResolutionCapable: true
+        LSApplicationCategoryType: public.app-category.utilities
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.aaronli.scratch
+        PRODUCT_NAME: Scratch
+        ENABLE_HARDENED_RUNTIME: YES
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: 74S429U9E6
+        ASSETCATALOG_COMPILER_APPICON_NAME: Scratch_Icon
